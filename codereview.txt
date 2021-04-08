@@ -1,0 +1,52 @@
+I. Conventii de nume:
+
+1. Numele clasei nu este sugestiv, nu reflecta scopul clasei. O sa-l modific in Imprumut
+2. Numele pachetului nu este bun, l-am modificat in ro.ase.csie.cts.g1088.tema1
+3. Numele metodei "public double imprumut()" nu este bun, l am modificat in "AfisareValoareImprumut"
+4. Numele metodei "public String to_string()" este gresit, l am modificat in "public String toString()"
+5. Numele metodei "public static double calculeaza(Imprumut[] conturi)" nu este sugestiv, l am modificat in 
+		"public static double CalculeazaComisionTotal"
+6. Nu se abreviaza numele variabilelor 
+		-> temp devine temporar
+		-> vb devine variabila
+	
+II. Reguli de scriere a codului sursa
+
+7. Declararea unei singure variabile pe fiecare linie de cod. Variabilele din clasa cont era definitine mai multe pe o linie
+8. Fiecare bloc de instructiune trebuie marcat prin identare. In clasa "public static double calculeaza(Cont[]	conturi)" nu se intampla acest lucru
+9. Fiecare instructiune trebuie sa inceapa si sa se termine cu {}. 
+		->In metoda "public void setValoare(double valoare) throws Exception" avem o instructiune if care nu are {}
+		->In metoda "public static double calculeaza(Cont[]	conturi)" avem o instructiune if care nu are {}
+10. Trebuie sa existe un spatiu intre { de inceput a functie si header-ul functiei, { nu trebuie sa fie pe randul urmator
+		->La metoda "public static double calculeaza(Cont[]	conturi)" acolada de inceput se afla pe randul urmator
+11. Intre fiecare metode trebuie sa fie o linie goala
+		->intre metodele "public void print()" si "public String to_string() " nu este lasata o linie libera
+12. Operatorii trebuie separati de operanzi printr un spatiu
+		->"return "Loan: "+this.valoare_imprumut+"; rate: "+this.rata+"; days active:"+zileActiv+"; Type: "+tip_cont+";";" nu e ok
+13. Sunt folosite variabile care nu au niciun scop
+		->vb din print
+14. Valoarea de la comision total este scrisa gresit
+
+III. Reguli de CleanCode in structuri conditionale
+
+15. Atunci cand conditiile devin prea mari trebui sa utilizam variabile intermediare
+
+IV. Reguli de CleanCode in clase
+
+16. Toate metodele trebuie sa aiba legatura cu clasa
+		->public void print() nu are legatura cu clasa
+17. Nu trebuie sa incarcam clasa generala asa ca mutam din metode in alte clase aferente
+18. Nu exista clasa Account
+
+IV. Reguli de CleanCode in comentarii
+
+19. Nu trebuie sa fie prezente comentariile
+
+KISS + SRP
+
+20. Se repeta secvente in functii
+21. Fiecare clasa trebuie sa aiba o singura responsabilitate
+
+
+
+
