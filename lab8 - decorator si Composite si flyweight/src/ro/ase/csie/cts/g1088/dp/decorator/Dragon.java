@@ -14,6 +14,12 @@ public class Dragon extends SuperErou{
 	}
 
 	@Override
+	public int getPuncteViata() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
 	public void esteLovit(int puncte) {
 		System.out.println(String.format("%s este lovit si pierde %d puncte",
 				this.nume, puncte));

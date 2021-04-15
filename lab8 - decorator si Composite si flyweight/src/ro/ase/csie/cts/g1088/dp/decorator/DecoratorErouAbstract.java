@@ -23,6 +23,11 @@ public abstract class DecoratorErouAbstract extends SuperErou {
 	}
 
 	@Override
+	public int getPuncteViata() {
+		return this.erou.getPuncteViata();
+	}
+
+	@Override
 	public void seVindeca(int puncte) {
 		this.erou.seVindeca(puncte);
 		

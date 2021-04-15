@@ -10,8 +10,8 @@ public static final int NIVEL_CRITIC = 200;
 
 	@Override
 	public void alearga() {
-		if(this.erou.puncteViata < NIVEL_CRITIC) {
-			System.out.println("Eroul nu mai poate alerga. este ranit critic");
+		if(this.erou.getPuncteViata() < NIVEL_CRITIC) {
+			System.out.println("Eroul nu mai poate alerga este ranit critic");
 		}
 		else
 			this.erou.alearga();
