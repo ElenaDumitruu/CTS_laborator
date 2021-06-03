@@ -1,10 +1,14 @@
 package ro.ase.csie.cts.g1088.testare.teste;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.junit.Test;
 
@@ -71,9 +75,31 @@ public class TestStudentAlteTeste {
 		student.setNote(refNote);
 		refNote.set(0, 5);
 		int noteExiste[]= new int[student.getNrNote()];
+		int[] noteExistente;
 		for(int i = 0; i<student.getNrNote();i++) {
 			noteExistente[i]=student.getNota(i);
 		}
 		assertArrayEquals("test shalloe", noteStudent, noteExistente);
+	}
+	
+	@Test
+	public void testGetMediePerformance() {
+		ArrayList<Integer>note = new ArrayList<>();
+		int nrNote=(int) 1e6;
+		Random random= new Random();
+		for(int i=0; i<nrNote; i++) {
+			note.add(random.nextInt(Student.MAX_NOTA)+1);
+		
+		}	student.setNote(note);
+		long tStart = System.currentTimeMillis();
+		student.getMedie();
+		long tFinal=System.currentTimeMillis();
+		
+		long durata=tFinal-tStart;
+		if(durata<=10) {
+			assertTrue(true);
+		}else {
+			fail("calc dureaza mai mult");
+		}
 	}
 }

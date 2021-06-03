@@ -1,5 +1,6 @@
 package ro.ase.csie.cts.g1088.testare.module;
 import java.util.ArrayList;
+import java.util.List;
 
 import ro.ase.csie.cts.g1088.testare.exceptii.ExceptieNota;
 import ro.ase.csie.cts.g1088.testare.exceptii.ExceptieNume;
@@ -54,8 +55,8 @@ public class Student {
 	}
 
 
-	public void setNote(ArrayList<Integer> note) throws ExceptieNota{
-		this.note = note;
+	public void setNote(List<Integer> refNote) throws ExceptieNota{
+		this.note = refNote;
 	}
 	
 	
@@ -95,4 +96,10 @@ public class Student {
 		}
         return min;
     }
+
+
+	public void setNote(List<Integer> refNote) {
+		// TODO Auto-generated method stub
+		
+	}
 }
